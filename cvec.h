@@ -32,7 +32,7 @@ typedef struct cvec
     size_t allocated;
 } cvec_t;
 
-/* init a new cvec_t on the free-store and return its pointer */
+/* init a new cvec_t on the heap and return its pointer */
 cvec_t *cvec_init(void);
 
 /* free the memory of a cvec_t */
@@ -44,7 +44,7 @@ void cvec_append(cvec_t *dest, const void *src, size_t slen);
 /* like cvec_append, but appends a null-terminating byte. */
 void cvec_cat(cvec_t *dest, const char *src);
 
-/* resize cv->buf to be of size n */
+/* resize cv->buf to be of len n */
 void cvec_resize(cvec_t *cv, size_t n);
 
 /* remove n bytes starting at offset in cv->buf */

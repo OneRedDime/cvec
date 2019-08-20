@@ -47,7 +47,7 @@ size_t min(size_t x, size_t y)
     return y;
 }
 
-/* init a new cvec_t on the free-store and return its pointer */
+/* init a new cvec_t on the heap and return its pointer */
 cvec_t *cvec_init(void)
 {
     return calloc(1, sizeof(cvec_t));
